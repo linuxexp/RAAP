@@ -3,7 +3,7 @@ RAAP (Remote Arduino Automation Protocol)
 RAAP can be used for remote communication, automation, inter-arduino communication to perform I/O among other things, with arduino board using a communication link. In this firmware release, "RAAP" communicates through Serial Communication.
 RAAP is a fast, reliable, binary protocol with low overhead.
 
-# RAAP Communication
+RAAP Communication
 RAAP client and server exchanges binary control messages. The structure of a control message is as follows
 
 |---- 1 uint8 Operation opcode ---|--- 1 uint8 size of payload, after this header ---|-- arbitrary long payload --|
@@ -12,7 +12,7 @@ Operation opcode denotes what the RAAP server must perform, payload includes the
 
 Upon correct reception, and structural correctness of the control message, the "RAAP" server replies with "OK" control message otherwise "FAIL" control message. It is to be noted that "OK" control message doesn't denotes that the requested operation completed successfully. For example requesting pinMode operation will return "OK", but not necessarily denotes that pinMode is successful.
 
-# Operation opcodes
+Operation opcodes
 OK               0x00 (server only)
 FAIL             0x01 (server only)
 PIN_MODE         0x00 
@@ -28,7 +28,7 @@ SHIFT_OUT        0x09
 SHIFT_IN         0x10
 PULSE_IN         0x11
 
-# PORT opcodes
+PORT opcodes
 PORT_OUTPUT	     0x00
 PORT_INPUT       0x01
 These are used with pinMode control message
