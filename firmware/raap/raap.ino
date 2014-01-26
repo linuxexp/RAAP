@@ -20,6 +20,13 @@
 // analogReadResolution ()
 // analogWriteResolution ()
 
+// TODO: functions manipulating int (16) should be converted
+// to 8 bit value, the loss of precision should be kept low
+// Currently there is no internal conversion of data,
+// all functions manipulating, data size greater than 8 bit
+// should be used carefully, so as not to send a value
+// greater than 8 bit in size
+
 // Mega 1280 & 2560
 #if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
 #define ATmega_1280_2560 // Mega series
